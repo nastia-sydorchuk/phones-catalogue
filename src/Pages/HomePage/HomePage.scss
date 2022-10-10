@@ -1,0 +1,50 @@
+@import '../../Helpers/utils';
+
+.HomePage {
+  &__category-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  &__category-img {
+    @include square(368px);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-bottom: 24px;
+    @extend %transition;
+
+    @media (max-width: 1280px) {
+      @include square(232px)
+    }
+
+    &:hover {
+      background-size: 110%;
+    }
+
+    &--phones {
+      background-image: url(../../Images/phones.png);
+      background-color: #EFD5B7;
+    }
+
+    &--tablets {
+      background-image: url(../../Images/tablets.png);
+      background-color: #808080;
+    }
+  
+    &--accessories{
+      background-image: url(../../Images/acc.png);
+      background-color: #601A3A;
+    }
+  }
+
+  &__category-link {
+    font-family: 'Mont';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: $primaryColour;
+    margin-bottom: 4px;
+  }
+}
